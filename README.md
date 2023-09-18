@@ -1,8 +1,2 @@
-#Este es un archivo README.md
-
-Contiene sintaxis markdown y se usa para:
-
-* Dar una breve descripción del contenido del repositorio
-* Contar cómo sacar provecho del trabajo aquí presente
-* Explicar a los interesados cómo contribuir
-* etc.
+<h1 align="center"> Mi README </h1>
+https://www.canva.com/design/DAFuy4L-9fg/_kc16Sk3bhY8HDuDSdYeHw/edit?ui=eyJHIjp7fX0
