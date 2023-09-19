@@ -22,5 +22,13 @@ Además, veremos como trabajar en GitHub mediante el trabajo individual y sobre 
 - `Tema principal`: undefined
 - `Características principales`: undefined 
 
+## ✔️ Tecnologías utilizadas en el proyecto 💻
+- `Java`
+- `PHP`
+- `HTML`
+- `JavaScript`
+- `Python`
+- `MySQL`
+
 
 </html>
