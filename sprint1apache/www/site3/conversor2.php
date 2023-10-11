@@ -9,10 +9,18 @@
 		$v_pulgadas = $_POST["fcantidad"];
 		$v_metros = $v_pulgadas * 0.0254;
 		echo $v_pulgadas."pulgada(s) = ".$v_metros." metro(s)";
-		}else{
-		echo "Unidad no soportada";
-		}
-	      }
+
+	} else {
+		if($_POST["funidad"] == "pie"){
+		$v_pies = $_POST["fcantidad"];
+		$v_metros = $v_pies * 0.3048;
+		echo $v_pies."pie(s) = ".$v_metros."metro(s)";
+    	
+	}else{
+	echo "Unidad no soportada";
+	}
+}
+}
 	?>
 	</p>
 	<p>Realiza una nueva conversión:</p>
@@ -21,6 +29,8 @@
 		<input type="text" id="cantidad_input" name="fcantidad"><br>
 		<input type="radio" id="pulgada_input" name="funidad" value="pulgada">
 		<label for="pulgada_input">Pulgada(s)</label><br>
+		<input type="radio" id="pies_input" name="funidad" value="pie">
+		<label for="pies_input">Pie(s)</label><br>
 		<input type="radio" id="otro_input" name="funidad" value="otro">
 		<label for="otro_input">Otro</label><br>
 		<input type="submit" value="Convertir">
