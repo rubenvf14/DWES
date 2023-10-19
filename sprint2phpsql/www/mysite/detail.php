@@ -1,13 +1,15 @@
 <?php
   $db = mysqli_connect('localhost', 'root', '1234', 'mysitedb') or die('Fail');
 ?>
+
 <html>
 <body>
+<?php
 	if(!isset($_GET['comentario'])){
-	die('No se ha especificado una cancion');
+	die('No se ha especificado un comentario');
 	}
-	$comentario= $_GET['comentario'];
-	$query = 'SELECT * FROM tcomentarios WHERE id='.$comentario;
+	$juego_id= $_GET['juego_id'];
+	$query = 'SELECT * FROM tcomentarios WHERE juego_id='.$juego_id;
 	$result = mysqli_query($db, $query) or die('Query error');
 	$only_row = mysqli_fetch_array($result);
 	echo '<h1>'.$only_row['comentario'].'</h1>';
