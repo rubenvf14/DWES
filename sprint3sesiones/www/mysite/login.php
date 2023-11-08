@@ -12,7 +12,7 @@
 	$only_row = mysqli_fetch_array($result);
 	if($only_row[1] == $password_posted){
 		session_start();
-		$_SESSION['id'] = $only_row[0];
+		$_SESSION['user_id'] = $only_row[0];
 		header('Location: main.php');
 		} else {
 		 echo '<p>Contraseña incorrecta</p>';
