@@ -4,10 +4,15 @@
 <html>
 	<body>
 	<?php
+	session_start();
+	$user_id_a_insertar = 'NULL';
+	if(!empty($_SESSION['id'])){
+	}
+
 	$juego_id = $_POST['juego_id'];
 	$comentario = $_POST['new_comment'];
 
-	$query = "INSERT INTO tcomentarios(comentario, usuario_id, juego_id) VALUES ('".$comentario."',NULL,".$juego_id.")";
+	$query = "INSERT INTO tcomentarios(comentario, usuario_id, juego_id) VALUES ('".$comentario."','".$user_id_a_insertar."','".$juego_id.")";
 
 	mysqli_query($db, $query) or die('Error');
 
