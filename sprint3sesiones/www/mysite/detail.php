@@ -45,5 +45,6 @@
 		<input type="hidden" name="juego_id" value="<?php echo $juego_id; ?>">
 		<input type="submit" value="Comentar">
 	</form>
+	<a href="/logout.php">Desloguearse</a>
 </body>
 </html>

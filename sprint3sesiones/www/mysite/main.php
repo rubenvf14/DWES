@@ -47,7 +47,7 @@
 	
 	mysqli_close($db);
 	?>
-
+	<a href="/logout.php">Desloguearse</a>
 
 </body>
 </html>
