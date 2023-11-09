@@ -1,10 +1,14 @@
 <?php
   $db = mysqli_connect('localhost','root','1234','mysitedb') or die('Fail');
+?>
+<html>
+<body>
+<?php
 
   $email_posted = $_POST['email'];
   $password_posted = $_POST['contraseña'];
   $password_hasheado =  password_hash($password_posted, PASSWORD_DEFAULT);
-  password_verify($password_introducido, $password_hasheado);
+  $password_verificacion =  password_verify($password_posted, $password_hasheado);
 
   $query = "SELECT id, contraseña FROM tusuarios WHERE email = '".$email_posted."'";
   $result = mysqli_query($db, $query) or die('Query error');
@@ -21,3 +25,5 @@
 		 echo '<p>Usuario no encontrado con ese email</p>';
 		}
 ?>
+</body>
+</html>
