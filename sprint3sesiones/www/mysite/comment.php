@@ -12,15 +12,15 @@
 
 	$juego_id = $_POST['juego_id'];
 	$comentario = $_POST['new_comment'];
-
-	$query = "INSERT INTO tcomentarios(comentario, usuario_id, juego_id) VALUES ('".$comentario."','".$user_id_a_insertar."','".$juego_id.")";
+	
+	$query = "INSERT INTO tcomentarios(comentario, juego_id, usuario_id, fecha) VALUES ('".$comentario."',".$juego_id.",".$user_id_a_insertar.", now())";
 
 	mysqli_query($db, $query) or die('Error');
 
 	echo "<p>Nuevo comentario ";
 	echo mysqli_insert_id($db);
 	echo " añadido</p>";
-	echo "<a href='/detail.php?juego_id=".$juego_id."'>Volver</a>";
+	echo "<a href='/detail.php?id=".$juego_id."'>Volver</a>";
 	mysqli_close($db);
 	?>
 </body>
