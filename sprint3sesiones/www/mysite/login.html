@@ -1,11 +1,32 @@
 <html>
+<script>
+	document.addEventListener("DOMContentLoaded", function(){
+	document.getElementById("formulario").addEventListener('submit', validarFormulario);
+});
+
+	function validarFormulario(evento){
+		evento.preventDefault();
+		var email = document.getElementById('email').value;
+		if(email.length == 0){
+		alert('No has escrito nada en el email');
+		return;
+	}
+	var clave = document.getElementById('contraseña').value;
+	if(clave.length == 0){
+	alert('No has escrito nada en la contraseña');
+	return;
+	}
+	this.submit();
+}
+
+</script>
 <body>
 	<h1>Formulario del login</h1>
-	<form action="login.php" method="post">
+	<form action="login.php" method="post" id="formulario">
 	<label for="usuario">Introduza o seu email</label>
-	<input name="email" type="text" placeholder="e-mail"><br>
+	<input name="email" id="email" type="text" placeholder="e-mail"><br>
 	<label for="contraseña">Introduza o seu contrasinal</label>
-	<input name="contraseña" type="password" placeholder="Contrasenha"><br>
+	<input name="contraseña" id="contraseña" type="password" placeholder="Contrasenha"><br>
 	<input type="submit" value="Iniciar sesion">
 </body>
 </html>
