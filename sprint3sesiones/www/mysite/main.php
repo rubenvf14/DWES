@@ -13,10 +13,19 @@
 	color: white;
 	}
 
+	.c1:hover{
+	background-color: #FFA420;
+	color: #FFFFFF;
+	}
+
 	.c2{
 	background-color:#90EE90;
 	color:black;
 	}
+
+	.c2:hover{
+	background-color: #76766D;
+	color: #FFFFFF;
 
 </style>
 </head>
