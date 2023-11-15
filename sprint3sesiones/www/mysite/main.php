@@ -57,6 +57,6 @@
 	mysqli_close($db);
 	?>
 	<a href="/logout.php">Desloguearse</a>
-
+	<a href="/ncontr.html">Cambiar contrasenha</a>
 </body>
 </html>
