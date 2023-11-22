@@ -1,7 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 
-from .models import Tjuegos
+from .models import Tjuegos, Tcomentarios
+from django.views.decorators.csrf import csrf_exempt
+import json
+
 
 # Create your views here.
 
@@ -38,3 +41,15 @@ def devolver_cancion_por_id(request, id_solicitado):
 		'comentarios': lista_comentarios
 	}
 	return JsonResponse(resultado, json_dumps_params={'ensure_ascii': False})
+
+
+@csrf_exempt
+def guardar_comentario(request, juego_id):
+	if request.method != 'POST':
+		return None
+	json_peticion = json.loads(request.body)
+	comentario = Tcomentarios()
+	comentario.comentario = json_peticion['nuevo_comentario']
+	comentario.juego = Tjuegos.objects.get(id = juego_id)
+	comentario.save()
+	return JsonResponse({"status": "ok"})
