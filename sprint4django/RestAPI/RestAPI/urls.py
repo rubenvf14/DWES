@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+"""Aquí importamos el archivo views que se encuentra dentro de la carpeta webserviceapp"""
 from webserviceapp import views
 
+"""Estas serán las url con las que accederemos a nuestras páginas web desde nuestro navegador"""
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('test', views.pagina_de_prueba),

@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+"""Ahora añadiremos la app a INSTALLED_APPS para que la pueda detectar el sistema como una app"""
 INSTALLED_APPS = [
     'webserviceapp.apps.WebserviceappConfig',
     'django.contrib.admin',
@@ -74,6 +75,7 @@ WSGI_APPLICATION = 'RestAPI.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+"""Aquí añadiremos las claves de configuración necesarias, en este caso NAME, USER, PASSWORD, ENGINE, HOST, PORT"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
